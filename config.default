@@ -1,0 +1,8 @@
+export GCP_PROJECT_ID="ADD YOUR VALUE HERE"
+export GCP_REGION="us-central1"
+export ARTIFACT_REPO_NAME="gke-gaming-repo"
+export GKE_CLUSTER_NAME="gaming-cluster"
+export GKE_MACHINE_TYPE="e2-standard-4"
+export GKE_NODES=1
+export GKE_MIN_NODES=1
+export GKE_MAX_NODES=10

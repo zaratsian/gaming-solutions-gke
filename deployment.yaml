@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: base-app-python
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: base-app
+  template:
+    metadata:
+      labels:
+        app: base-app
+    spec:
+      containers:
+      - name: base-app
+        image: "$GCP_REGION-docker.pkg.dev/$GCP_PROJECT_ID/$ARTIFACT_REPO_NAME/base-app-python:latest"
+        ports:
+        - containerPort: 8080
+        env:
+          - name: PORT
+            value: "8080"
